@@ -1,0 +1,51 @@
+## Configuration for spring config
+---
+spring:
+  profiles: adjective
+  application:
+    name: spring-adjective-l4
+  cloud:
+    config:
+      uri: http://localhost:8001
+
+---
+spring:
+  profiles: article
+  application:
+    name: spring-article-l4
+  cloud:
+    config:
+      uri: http://localhost:8001
+      
+---
+spring:
+  profiles: noun
+  application:
+    name: spring-noun-l4
+  cloud:
+    config:
+      uri: http://localhost:8001
+      
+---
+spring:
+  profiles: subject
+  application:
+    name: spring-subject-l4
+  cloud:
+    config:
+      uri: http://localhost:8001
+
+---
+spring:
+  profiles: verb
+  application:
+    name: spring-verb-l4
+  cloud:
+    config:
+      uri: http://localhost:8001
+
+---      
+spring:
+  profiles: local-test
+  application:
+    name: local  

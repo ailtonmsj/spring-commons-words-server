@@ -1,11 +1,16 @@
-# spring-commons-words-server
-### to run each on of the server:
+# spring-commons-words-server  
+### to run each one in separated command:
 
 mvn spring-boot:run -Dspring.profiles.active=subject  
 mvn spring-boot:run -Dspring.profiles.active=verb  
 mvn spring-boot:run -Dspring.profiles.active=article  
 mvn spring-boot:run -Dspring.profiles.active=adjective  
 mvn spring-boot:run -Dspring.profiles.active=noun  
+
+### to run all word servers in a single command:
+
+mvn spring-boot:run -Dspring.profiles.active=subject & mvn spring-boot:run -Dspring.profiles.active=verb & mvn spring-boot:run -Dspring.profiles.active=article & mvn spring-boot:run -Dspring.profiles.active=adjective & mvn spring-boot:run -Dspring.profiles.active=noun  
+
 
 The urls are:
 * to retrieve the main service  

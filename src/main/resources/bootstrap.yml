@@ -10,10 +10,15 @@ server:
   port: ${PORT:${SERVER_PORT:0}}
 
 ## Allow Eureka to recognize two apps of the same type on the same host as separate instances:
+#eureka:
+#  instance:
+#    metadataMap:
+#      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+      
+# Allow Eureka to recognize two apps of the same type on the same host as separate instances:
 eureka:
   instance:
-    metadataMap:
-      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}
 
 ---
 spring:
@@ -30,6 +35,12 @@ spring:
 ---
 spring:
   profiles: noun
+  application:
+    name: spring-noun-l4
+      
+---
+spring:
+  profiles: noun-cold
   application:
     name: spring-noun-l4
       
